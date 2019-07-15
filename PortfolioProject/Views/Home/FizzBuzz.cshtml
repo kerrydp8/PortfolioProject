@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "FizzBuzz";
+}
+
+<h2>FizzBuzz</h2>
+
+<div class="row text-center h3">
+    Enter Two Numbers between 1 and 100 below:
+</div>
+
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-2">
+        Enter 1st Integer:
+    </div>
+    <div class="col-md-2">
+        <input type="number" id="mathnum1" placeholder="First Number" />
+    </div>
+    <div class="col-md-8">
+        <p id="fbOut"></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        Enter 2nd Integer:
+    </div>
+    <div class="col-md-2">
+        <input type="number" id="mathnum2" placeholder="Second Number" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        <button id="fbBtn" class="btn-primary">FizzBuzz</button>
+    </div>
+    <div class="col-md-2">
+        <button id="clrBtn" class="btn-danger">Clear</button>
+    </div>
+
+    <div class="col-md-2">
+        <button id="showBtn" class="button btn-dark button1">Show Code</button>
+    </div>
+
+    <div class="col-md-2">
+        <button id="hideBtn" class="button btn-dark button1">Hide Code</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div id="fbCode">
+            <pre class="brush: js">$(document).ready(function () {
+                      $("#fbBtn").click(function () {
+
+        var num1 = +$("#mathnum1").val();
+        var num2 = +$("#mathnum2").val();
+        var output = [];
+
+        for (var i = 1; i <= 100; i++) {
+
+            if ((i % num1 == 0) && (i % num2 != 0)) {
+                output.push("Fizz");
+            }
+
+            else if ((i % num2 == 0) && (i % num1 != 0)) {
+                output.push("Buzz");
+            }
+
+            else if ((i % num1 == 0 && i % num2 == 0)) { 
+            }
+
+            else {
+                output.push(i);
+            }
+        }
+
+        $("#fbOut").text(output);
+
+    });
+
+    $("#clrBtn").click(function () {
+
+        $("#mathnum1").val(""); 
+        $("#mathnum2").val(""); 
+        $("#fbOut").text(""); 
+
+    });     
+    });
+    </pre>
+            <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+    syntax highlighter. Useful for displaying code.-->
+        </div>
+    </div>
+</div>
+
+@section scripts{
+           
+    <script src="~/Scripts/FizzBuzz.js"></script>
+
+}
+
+
+

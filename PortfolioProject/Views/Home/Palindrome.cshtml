@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Palindrome";
+}
+
+<h2>Palindrome</h2>
+
+<div class="col-md-12 h3 text-center">
+
+    <div class="row">
+        Enter a word to determine if it is a palindrome...
+    </div>
+
+    <br />
+
+    <div class="col-md-6">
+        <input type="text" id="palIn" placeholder="Enter your word" />
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <button id="palinEnter" class="button btn-primary">Palindrome?</button>
+        </div>
+
+        <div class="col-md-2">
+            <button id="clrBtn3" class="button btn-danger">Clear</button>
+        </div>
+
+        <div class="col-md-2">
+            <button id="showBtn3" class="button btn-default">Show Code</button>
+        </div>
+
+        <div class="col-md-2">
+            <button id="hideBtn3" class="button btn-default">Hide Code</button>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-6">
+    <div class="row">
+        <div class="col-md-12 text-center h4">
+            <u>Results</u>
+        </div>
+    </div>
+    <div class="row text-center h4">
+        <p id="palOut"></p> <!--Leaves space for the result to be printed and declares a tag for the output-->
+    </div>
+
+    <br />
+
+    <div class="row text-center h4">
+        <p id="palOut2"></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div id="code">
+            <pre class="brush: js">$(document).ready(function () {
+
+    $("#palinEnter").click(function () {
+        //Step 1: Get the word
+        var word = $("#palIn").val();
+
+        word = word.toLowerCase(); 
+
+        var letters = word.split("");
+
+        //Step 2: Reverse the array
+        letters = letters.reverse(); 
+        var reversedWord = letters.join("");
+
+        //Step 3: Inform the user
+        $("#palOut").text(reversedWord);
+
+        if (word === reversedWord) {
+            $("#palOut2").text("Yes, this is a palindrome.");
+        }
+        else {
+            $("#palOut2").text("No, this is not a palindrome.");
+        }
+
+    });
+
+    $("#clrBtn").click(function () {
+
+        $("#palIn").val(""); 
+        $("#palOut").text("");
+        $("#palOut2").text("");
+
+    });
+});</pre>
+            <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+                syntax highlighter. Useful for displaying code.-->
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Palindrome.js"></script>
+    <!--References the Palindrome Demo external file, now in its own .js file
+    that would affect all the other files, you'd probably want to try the Layout method.-->
+}

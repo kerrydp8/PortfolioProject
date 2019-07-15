@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Factorial";
+}
+
+<h2>Factorial</h2>
+
+<div class="row">
+    <div class="col-md-12 text-center h2">
+        Enter an integer to view its factorial:
+    </div>
+</div>
+
+<div class="row">
+
+    <!--Left Column-->
+    <div class="col-md-6">
+        <div class="row">
+            <input type="number" id="fact" placeholder="Enter your number" /> <!--The placeholder is for what will be displayed before text is entered-->
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <!--Breaking the column further into three so two buttons will appear beside each other-->
+                <button id="factBtn" class="btn btn-primary">Calculate</button>
+            </div>
+            <div class="col-md-3">
+                <!--Breaking the column further into three so two buttons will appear beside each other-->
+                <button id="clrBtn" class="btn btn-danger">Clear</button>
+            </div>
+            <div class="col-md-3">
+                <!--Breaking the column further into three so two buttons will appear beside each other-->
+                <button id="showBtn" class="btn btn-dark">Show Code</button>
+            </div>
+            <div class="col-md-3">
+                <!--Breaking the column further into three so two buttons will appear beside each other-->
+                <button id="hideBtn" class="btn btn-dark">Hide Code</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Right Column-->
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12 text-center h4">
+                <u>Results...</u> <!--Can be used to underline text-->
+            </div>
+        </div>
+        <div class="row">
+            <p id="factOut"></p> <!--Leaves space for the result to be printed and declares a tag for the output-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="factCode">
+            <pre class="brush: js">$(document).ready(function () {
+                        $("#factBtn").click(function () {
+
+        var num = $("#fact").val(); 
+
+        if (num < 1 || num > 171) {
+            alert("Please enter positive numbers less than 171!");
+            $("#fact").val("");
+        }
+
+        else {
+
+            for (var i = num - 1; i > 1; i--) {
+                num *= i;
+            }
+
+            $("#factOut").text(num);
+        }
+
+    });
+
+    $("#clrBtn").click(function () {
+
+        $("#fact").val(""); 
+        $("#factOut").text(""); 
+    });
+    </pre>
+            <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+        syntax highlighter. Useful for displaying code.-->
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script src="~/Scripts/Factorial.js"></script>
+
+}

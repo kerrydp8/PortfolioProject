@@ -1,0 +1,168 @@
+﻿
+@{
+    ViewBag.Title = "BasicMath";
+}
+
+<h2>BasicMath</h2>
+<!--<h2>MathExercise</h2> --> <!--I think this is okay but the above can be done as well:-->
+
+                        <div class="row">
+                            <div class="col-md-12 text-center h3">
+                                Enter five integers
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!--One column for text-->
+                                        Enter number 1:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum1" class="form-control" /> <!--One column for input-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Enter number 2:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum2" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Enter number 3:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum3" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Enter number 4:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum4" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Enter number 5:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum5" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <button id="mathBtn" class="btn-primary">Calculate</button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button id="clrBtn" class="btn-danger">Clear</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="col-md-12 text-center h4">
+                                    The Results:
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p id="smallest"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p id="largest"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p id="mean"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p id="sum"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p id="product"></
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p id="average"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="bmCode">
+                                        <pre class="brush: js">$(document).ready(function () {
+                        $("#mathBtn").click(function () {
+        //Step 1: Get user data
+        var num1 = Number($("#mathnum1").val());
+        var num2 = Number($("#mathnum2").val());
+        var num3 = Number($("#mathnum3").val());
+        var num4 = Number($("#mathnum4").val());
+        var num5 = Number($("#mathnum5").val());
+
+        //Step 2: Make the calculations with the given data
+        var smallest = Math.min(num1, num2, num3, num4, num5);
+        var largest = Math.max(num1, num2, num3, num4, num5);
+        var sum = num1 + num2 + num3 + num4 + num5;
+        var product = num1 * num2 * num3 * num4 * num5;
+        var average = sum / 5;
+
+          $("#smallest").text("Minimum Value: " + smallest); //Example of string concatenation.
+        $("#largest").text("Maximum Value: " + largest);
+        $("#sum").text("The sum is " + sum);
+        $("#product").text("The product is " + product);
+        $("#average").text("The mean of the values is " + average);
+    });
+
+
+    //Step 4: Allow the user to clear the results
+    $("#clrBtn").click(function () {
+        $("#mathnum1").val(""); 
+        $("#mathnum2").val("");
+        $("#mathnum3").val("");
+        $("#mathnum4").val("");
+        $("#mathnum5").val("");
+
+        $("#smallest").text("");
+        $("#largest").text("");
+        $("#sum").text("");
+        $("#product").text("");
+        $("#average").text("");
+
+    });
+    </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-dark" id="showBtn">Show Code</button>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-dark" id="hideBtn">Hide Code</button>
+                            </div>
+                        </div>
+
+

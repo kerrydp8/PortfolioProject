@@ -1,0 +1,1065 @@
+﻿<script>LAYOUT = null;</script>
+
+<style>
+
+    p {
+        font-size: 16px;
+    }
+
+    .button1 {
+        width: 100%
+    }
+
+    div.wrap{
+        word-wrap: break-word;
+    }
+
+    .modal-body {
+    max-height: calc(100vh - 143px);
+    overflow-y: auto; }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kerry Peay Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/business-casual.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-image:url('https://cdn.pixabay.com/photo/2015/08/04/09/01/background-874457_960_720.jpg');">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Kerry Peay</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4">
+                        @Html.ActionLink("Home", "Index", null, new { @class = "navbar-brand" })
+                        <!--<a class="nav-link text-uppercase text-expanded" href="index.html">Home <span class="sr-only">(current)</span>
+                        </a>-->
+                    </li>
+                    <li class="nav-item active px-lg-4">
+                        @Html.ActionLink("About", "About", null, new { @class = "navbar-brand" })
+                        <!--<a class="nav-link text-uppercase text-expanded" href="about.html">About</a>-->
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        @Html.ActionLink("Contact", "Contact", null, new { @class = "navbar-brand" })
+                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        @Html.ActionLink("Skills", "Skills", null, new { @class = "navbar-brand" })
+                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        @Html.ActionLink("Portfolio", "Portfolio", null, new { @class = "navbar-brand" })
+                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        @Html.ActionLink("Education", "Education", null, new { @class = "navbar-brand" })
+                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+        <!--<span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>-->
+        <span class="site-heading-upper text-primary"><b>Portfolio</b></span>
+    </h1>
+
+    <section class="page-section about-heading">
+        <div class="container">
+            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-lower"><b>Coding Challenges</b></span>
+                            </h2>
+                            <p>Coding exercises created using JavaScript</p>
+                            <div class="row">
+                                <div class="col-md-12 text-left">
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#basicMath">Basic Math</button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#factorial">Factorial</button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome">Palindrome</button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#fizzBuzz">FizzBuzz</button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#soaf">Sum of All Fears</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="basicMath" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Basic Math</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center h3">
+                            <p>Enter five integers and this program will print the min, max, sum, product, and mean of the values.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!--One column for text-->
+                                    Enter first value:
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="number" id="mathnum1" class="form-control" /> <!--One column for input-->
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Enter second value:
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" id="mathnum2" class="form-control" />
+                                </div>
+                            </div>
+
+                            <br />
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Enter third value:
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" id="mathnum3" class="form-control" />
+                                </div>
+                            </div>
+
+                            <br />
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Enter fourth value:
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" id="mathnum4" class="form-control" />
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Enter fifth value:
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" id="mathnum5" class="form-control" />
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button id="mathBtn" class="button btn-primary button1">Calculate</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button id="clrBtn" class="button btn-danger button1">Clear</button>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button id="showBtn" class="button btn-dark button1">Show Code</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button id="hideBtn" class="button btn-dark button1">Hide Code</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 text-left">
+
+                            <div class="row">
+                                <div class="col-md-12 text-center h3">
+                                    <u> <b>Results:</b></u>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p id="smallest"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p id="largest"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p id="mean"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p id="sum"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p id="product"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p id="average"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="bmCode">
+                                <pre class="brush: js">$(document).ready(function () {
+                        $("#mathBtn").click(function () {
+        //Step 1: Get user data
+        var num1 = Number($("#mathnum1").val());
+        var num2 = Number($("#mathnum2").val());
+        var num3 = Number($("#mathnum3").val());
+        var num4 = Number($("#mathnum4").val());
+        var num5 = Number($("#mathnum5").val());
+
+        //Step 2: Make the calculations with the given data
+        var smallest = Math.min(num1, num2, num3, num4, num5);
+        var largest = Math.max(num1, num2, num3, num4, num5);
+        var sum = num1 + num2 + num3 + num4 + num5;
+        var product = num1 * num2 * num3 * num4 * num5;
+        var average = sum / 5;
+
+         $("#smallest").text("Minimum Value: " + smallest); //Example of string concatenation.
+        $("#largest").text("Maximum Value: " + largest);
+        $("#sum").text("The sum is " + sum);
+        $("#product").text("The product is " + product);
+        $("#average").text("The mean of the values is " + average);
+    });
+
+
+    //Step 4: Allow the user to clear the results
+    $("#clrBtn").click(function () {
+        $("#mathnum1").val(""); 
+        $("#mathnum2").val("");
+        $("#mathnum3").val("");
+        $("#mathnum4").val("");
+        $("#mathnum5").val("");
+
+        $("#smallest").text("");
+        $("#largest").text("");
+        $("#sum").text("");
+        $("#product").text("");
+        $("#average").text("");
+
+    });
+    </pre>
+                            </div>
+                        </div>
+                   
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="factorial" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Factorial</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12 text-center h3">
+                            <p>Enter an integer and this program will print the factorial. Enter only positive values less than 171.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!--Left Column-->
+                        <div class="col-md-6 text-right">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <input type="number" id="fact" placeholder="Enter your number" /> <!--The placeholder is for what will be displayed before text is entered-->
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="factBtn" class="button btn-primary button1">Calculate</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="clrBtn2" class="button btn-danger button1">Clear</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="showBtn2" class="button btn-dark button1">Show Code</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="hideBtn2" class="button btn-dark button1">Hide Code</button>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-12"></div>
+
+                            </div>
+                        </div>
+
+                        <!--Right Column-->
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12 text-center h4">
+                                    <b><u>Results:</u></b> <!--Can be used to underline text-->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-center h4">
+                                    <p id="factOut"></p>
+                                </div>
+                                <!--Leaves space for the result to be printed and declares a tag for the output-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="factCode">
+                        <pre class="brush: js">$(document).ready(function () {
+                        $("#factBtn").click(function () {
+
+        var num = $("#fact").val(); 
+
+        if (num < 1 || num > 171) {
+            alert("Please enter positive numbers less than 171!");
+            $("#fact").val("");
+        }
+
+        else {
+
+            while (i <= num) {
+                num = num * i;
+                i++;
+            }
+
+            $("#factOut").text("The factorial of this value is " + num);
+        }
+
+    });
+
+    $("#clrBtn2").click(function () {
+
+        $("#fact").val(""); 
+        $("#factOut").text(""); 
+    });
+    </pre>
+                        <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+        syntax highlighter. Useful for displaying code.-->
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="palindrome" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Palindrome</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12 text-center h3">
+                            <p>Enter a word and this program will determine if it is a palindrome.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!--Left Column-->
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <input type="text" id="palIn" placeholder="Enter your word" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="palinEnter" class="button btn-primary button1">Calculate</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="clrBtn3" class="button btn-danger button1">Clear</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="showBtn3" class="button btn-dark button1">Show Code</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="hideBtn3" class="button btn-dark button1">Hide Code</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button id="forLoop" class="button btn-primary button1">For-Loop</button>
+                                </div>
+                            </div>
+                           <br />
+
+                        </div>
+
+                        <!--Right Column-->
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12 text-center h4">
+                                    <b><u>Results:</u></b> <!--Can be used to underline text-->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-center h4">
+                                    <p id="palOut"></p> <!--Leaves space for the result to be printed and declares a tag for the output-->
+                                    <p id="palOut2"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="code">
+                                <pre class="brush: js">$(document).ready(function () {
+
+    $("#palinEnter").click(function () {
+        //Step 1: Get the word
+        var word = $("#palIn").val();
+
+        word = word.toLowerCase(); 
+
+        var letters = word.split("");
+
+        //Step 2: Reverse the array
+        letters = letters.reverse(); 
+        var reversedWord = letters.join("");
+
+        //Step 3: Inform the user
+        $("#palOut").text(reversedWord);
+
+        if (word === reversedWord) {
+            $("#palOut2").text("Yes, this is a palindrome.");
+        }
+        else {
+            $("#palOut2").text("No, this is not a palindrome.");
+        }
+
+    });
+
+    $("#clrBtn").click(function () {
+
+        $("#palIn").val(""); 
+        $("#palOut").text("");
+        $("#palOut2").text("");
+
+    });
+
+ $("#forLoop").click(function() {
+
+        var word = $("#palIn").val();
+
+        word = word.toLowerCase();
+
+        for (var i = word.length - 1; i < word.length; i++) {
+
+            if (word.charAt([i]) === word.charAt([word.length - 1 - i])) {
+                $("#palOut").text(word);
+                $("#palOut2").text("Yes, this is a palindrome.");
+            }
+            else {
+                $("#palOut").text(word);
+                $("#palOut2").text("No, this is not a palindrome."); 
+            }
+        }
+    });
+
+});</pre>
+                                <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+            syntax highlighter. Useful for displaying code.-->
+                            </div>
+                        </div>
+
+                    </div>
+
+               
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="fizzBuzz" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">FizzBuzz</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Enter two numbers between 1 and 100. Each value that is a multiple of the first number will be replaced by the word "Fizz".</p>
+                    <p>Each value that is a multiple of the second value will be replaced by the word "Buzz".</p>
+                    <p>Any value that is a multiple of both will be replaced by the word "FizzBuzz".</p>
+
+                    <div class="row">
+
+                        <div class='col-md-6'>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum1F" placeholder="Enter first integer" class="form-control" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum2F" placeholder="Enter second integer" class="form-control" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="fbBtn" class="button btn-primary button1">Calculate</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="clrBtn4" class="button btn-danger button1">Clear</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="showBtn4" class="button btn-dark button1">Show Code</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="hideBtn4" class="button btn-dark button1">Hide Code</button>
+                                </div>
+                            </div>
+
+                            <br />
+
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12 text-center h4">
+                                    <b><u>Results:</u></b> <!--Can be used to underline text-->
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center wrap h4">
+                                    <p id="fbOut"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="fbCode">
+                                <pre class="brush: js">$(document).ready(function () {
+                      $("#fbBtn").click(function () {
+
+        var num1 = +$("#mathnum1").val();
+        var num2 = +$("#mathnum2").val();
+        var output = [];
+
+        for (var i = 1; i <= 100; i++) {
+
+            if ((i % num1 == 0) && (i % num2 != 0)) {
+                output.push("Fizz");
+            }
+
+            else if ((i % num2 == 0) && (i % num1 != 0)) {
+                output.push("Buzz");
+            }
+
+            else if ((i % num1 == 0 && i % num2 == 0)) { 
+            }
+
+            else {
+                output.push(i);
+            }
+        }
+
+        $("#fbOut").text(output);
+
+    });
+
+    $("#clrBtn").click(function () {
+
+        $("#mathnum1F").val(""); 
+        $("#mathnum2F").val(""); 
+        $("#fbOut").text(""); 
+
+    });     
+    });
+    </pre>
+                                <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+            syntax highlighter. Useful for displaying code.-->
+                            </div>
+                        </div>
+                    </div>
+                  
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="soaf" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sum of All Fears</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Enter six numbers and a k-value. This program will determine whether the k-value exists by adding two of the chosen integers.</p>
+
+                    <div class="row">
+
+                        <div class='col-md-6 text-right'>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum1S" placeholder="Enter first integer" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum2S" placeholder="Enter second integer" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum3S" placeholder="Enter third integer" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum4S" placeholder="Enter fourth integer" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum5S" placeholder="Enter fifth integer" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="mathnum6S" placeholder="Enter sixth integer" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="kvalue" placeholder="Enter K-Value" />
+                                </div>
+                                <!--The placeholder is for what will be displayed before text is entered-->
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="soafBtn" class="button btn-primary button1">Calculate</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="clrBtn5" class="button btn-danger button1">Clear</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="showBtn5" class="button btn-dark button1">Show Code</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <!--Breaking the column further into three so two buttons will appear beside each other-->
+                                    <button id="hideBtn5" class="button btn-dark button1">Hide Code</button>
+                                </div>
+                            </div>
+
+                            <br />
+
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12 text-center h4">
+                                    <b><u>Results:</u></b> <!--Can be used to underline text-->
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center wrap h4">
+                                    <p id="kOut"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div id="soafCode">
+                            <pre class="brush: js">
+                                    $(document).ready(function () {
+
+    $("#soafCode").hide();
+
+    $("#showBtn5").click(function () {
+
+        $("#soafCode").show();
+
+    });
+
+
+    $("#hideBtn5").click(function () {
+
+        $("#soafCode").hide();
+
+    });
+
+
+
+    $("#soafBtn").click(function () {
+
+        var num1 = +$("#mathnum1S").val();
+        var num2 = +$("#mathnum2S").val();
+        var num3 = +$("#mathnum3S").val();
+        var num4 = +$("#mathnum4S").val();
+        var num5 = +$("#mathnum5S").val();
+        var num6 = +$("#mathnum6S").val();
+        var k = +$("#kvalue").val();
+
+        var values = [num1, num2, num3, num4, num5, num6];
+        var sums = [];
+
+        for (var i = 0; i < values.length - 1; i++) {
+
+
+            for (var j = 0; j < values.length - 1; j++) {
+
+                if ((values[i] + values[j + 1])) {
+                    sums.push(values[i] + values[j + 1]);
+                }
+
+            }
+        }
+
+        for (var num = 0; num < sums.length; num++) {
+
+            if (k == sums[num]) {
+                $("#kOut").text("The k-value " + sums[num] + " has been found.");
+                return;
+           
+            }
+
+            else {
+                $("#kOut").text("The k-value has not been found");
+            }
+        }
+    });
+
+    $("#clrBtn5").click(function () {
+
+        $("#mathnum1S").val("");
+        $("#mathnum2S").val("");
+        $("#mathnum3S").val("");
+        $("#mathnum4S").val("");
+        $("#mathnum5S").val("");
+        $("#mathnum6S").val("");
+        $("#kvalue").val("");
+        $("#kOut").text("");
+
+    });
+});
+                                </pre>
+                            <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+            syntax highlighter. Useful for displaying code.-->
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                <br />
+
+
+               
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    <footer class="footer text-faded text-center py-5">
+        <div class="container">
+            <p class="m-0 small">Copyright &copy; Your Website 2019</p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+
+@section scripts{
+
+    <script src="~/Scripts/BasicMath.js"></script>
+    <script src="~/Scripts/Factorial.js"></script>
+    <script src="~/Scripts/Palindrome.js"></script>
+    <script src="~/Scripts/FizzBuzz.js"></script>
+    <script src="~/Scripts/SumOfAllFears.js"></script>
+
+    <script>
+
+        /*
+                                         <h3>Basic Math</h3>
+                                <div class="row">
+                                    <div class="col-md-12 text-center h3">
+                                        Enter five integers
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <!--One column for text-->
+                                                Enter number 1:
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="number" id="mathnum1" class="form-control" /> <!--One column for input-->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Enter number 2:
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="number" id="mathnum2" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Enter number 3:
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="number" id="mathnum3" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Enter number 4:
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="number" id="mathnum4" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Enter number 5:
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="number" id="mathnum5" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <button id="mathBtn" class="btn-primary">Calculate</button>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button id="clrBtn" class="btn-danger">Clear</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="col-md-12 text-center h4">
+                                            The Results:
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <p id="smallest"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <p id="largest"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <p id="mean"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <p id="sum"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <p id="product"></
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <p id="average"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+         */</script>
+
+}
+

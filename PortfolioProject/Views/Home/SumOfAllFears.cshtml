@@ -1,0 +1,198 @@
+﻿
+@{
+    ViewBag.Title = "SumOfAllFears";
+}
+
+<h2>Sum Of All Fears</h2>
+
+<style>
+
+    .standardW {
+        width: 135px;
+        margin-top: 10px;
+    }
+
+    .palInput {
+        background-color: blanchedalmond;
+        font-weight: bolder;
+    }
+</style>
+
+<div class="row text-center h3">
+    Enter five integers and check for a K-Value...
+</div>
+
+<div class="col-md-6">
+    <div class="row">
+        <div class="col-md-1">
+            1:
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="mathnum1" placeholder="Enter First Integer" />
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-1">
+            2:
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="mathnum2" placeholder="Enter Second Integer" />
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-1">
+            3:
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="mathnum3" placeholder="Enter Third Integer" />
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-1">
+            4:
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="mathnum4" placeholder="Enter Fourth Integer" />
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-1">
+            5:
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="mathnum5" placeholder="Enter Fifth Integer" />
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-1">
+            6:
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="mathnum6" placeholder="Enter Sixth Integer" />
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-1">
+            K-Value:
+        </div>
+        <div class="col-md-5">
+            <input type="number" id="kvalue" placeholder="Enter a K-Value" />
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+
+        <div class="col-md-1">
+            <button class="btn-primary standardW" id="calcBtn">
+                K-Value?
+            </button>
+        </div>
+
+
+        <div class="col-md-1">
+            <button class="btn-danger standardW" id="clrBtn">
+                Clear
+            </button>
+        </div>
+
+        <div class="col-md-1">
+            <button class="btn btn-dark" id="showBtn">
+                Show Code
+            </button>
+        </div>
+
+        <div class="col-md-1">
+            <button class="btn btn-dark" id="hideBtn">
+                Hide Code
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-md-6">
+    <p id="kOut"></p>
+    <div class="col-md-2">
+        <div id="soafCode">
+            <pre class="brush: js">
+   $("#calcBtn").click(function () {
+
+        var num1 = +$("#mathnum1").val();
+        var num2 = +$("#mathnum2").val();
+        var num3 = +$("#mathnum3").val();
+        var num4 = +$("#mathnum4").val();
+        var num5 = +$("#mathnum5").val();
+        var num6 = +$("#mathnum6").val();
+        var k = +$("#kvalue").val();
+
+        var values = [num1, num2, num3, num4, num5, num6];
+        var sums = [];
+
+        for (var i = 0; i < values.length - 1; i++) {
+
+
+            for (var j = 0; j < values.length - 1; j++) {
+
+                if ((values[i] + values[j + 1])) {
+                    sums.push(values[i] + values[j + 1]);
+                }
+
+            }
+        }
+
+        for (var num = 0; num < sums.length; num++) {
+
+            if (k == sums[num]) {
+                $("#kOut").text("The k-value " + sums[num] + " has been found.");
+                return;
+            }
+
+            else {
+                $("#kOut").text("The k-value has not been found");
+            }
+        }
+    });
+
+    $("#clrBtn").click(function () {
+
+        $("#mathnum1").val("");
+        $("#mathnum2").val("");
+        $("#mathnum3").val("");
+        $("#mathnum4").val("");
+        $("#mathnum5").val("");
+        $("#mathnum6").val("");
+        $("#kvalue").val("");
+        $("#kOut").text("");
+
+    });
+    </pre>
+            <!--These pre-tags are used to display pre-formatted text. Remember the class of the
+        syntax highlighter. Useful for displaying code.-->
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/SumOfAllFears.js"></script>
+}
+
