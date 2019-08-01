@@ -42,23 +42,11 @@
                         </a>-->
                     </li>
                     <li class="nav-item px-lg-4">
-                        @Html.ActionLink("About", "About", null, new { @class = "navbar-brand" })
-                        <!--<a class="nav-link text-uppercase text-expanded" href="about.html">About</a>-->
-                    </li>
-                    <li class="nav-item px-lg-4">
                         @Html.ActionLink("Contact", "Contact", null, new { @class = "navbar-brand" })
                         <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
                     </li>
                     <li class="nav-item px-lg-4">
-                        @Html.ActionLink("Resume", "Resume", null, new { @class = "navbar-brand" })
-                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
-                    </li>
-                    <li class="nav-item px-lg-4">
                         @Html.ActionLink("Portfolio", "Portfolio", null, new { @class = "navbar-brand" })
-                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
-                    </li>
-                    <li class="nav-item px-lg-4">
-                        @Html.ActionLink("Education", "Education", null, new { @class = "navbar-brand" })
                         <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
                     </li>
                 </ul>
@@ -74,7 +62,7 @@
         <span class="site-heading-upper text-primary"><b>Kerry Peay</b></span>
     </h1>
 
-    <div class="col-md-9">
+    <div class="col-md-12">
         <section class="page-section contact-heading">
             <div class="container">
                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
@@ -96,6 +84,11 @@
                                     During my time at UNC Charlotte, I achieved my goal of learning to develop games but was introduced to a variety of other types of software along the way. I gained the opportunity to work with a multitude of programming languages, including C++, Java, and C#.
                                 </p>
 
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-lower"><b>Click Below to View My Resume</b></span>
+                                </h2>
+                                <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#resume">Open Resume</button>
+
                             </div>
                         </div>
                     </div>
@@ -104,56 +97,28 @@
         </section>
     </div>
 
-    <br />
-    <br />
+    <!-- Modal -->
+    <div id="resume" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
 
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-        <!--<span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>-->
-        <span class="site-heading-upper text-primary"><b>Education</b></span>
-    </h1>
-
-    <section class="page-section contact-heading">
-        <div class="container">
-            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
-            <div class="about-heading-content">
-                <div class="row">
-                    <div class="col-xl-9 col-lg-10 mx-auto">
-                        <div class="bg-faded rounded p-5">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper">University of North Carolina at Charlotte, 2015-2019</span>
-                                <span class="section-heading-lower"><b>Bachelor of Science in Computer Science</b></span>
-                            </h2>
-                        </div>
-                    </div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Resume</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="https://i.ibb.co/FXDNhyb/Kerry-Peay-Resume-Image.jpg" alt="Kerry-Peay-Resume-Image" width="700" height="800" border="0">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
+
         </div>
-    </section>
-
-    <section class="page-section contact-heading">
-        <div class="container">
-            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
-            <div class="about-heading-content">
-                <div class="row">
-                    <div class="col-xl-9 col-lg-10 mx-auto">
-                        <div class="bg-faded rounded p-5">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper">Forsyth Technical Community College, 2011-2015</span>
-                                <span class="section-heading-lower"><b>Associate in Arts</b></span>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="col-sm-3">
-        <br />
-        <img src="https://i.ibb.co/r46CFTt/Graduation-Picture.jpg" alt="Graduation-Picture" width="1200" height="1000" class="img-thumbnail" />
     </div>
 
+    <br />
     <br />
 
     <footer class="footer text-faded text-center py-5">
@@ -169,3 +134,30 @@
 </body>
 
 </html>
+
+<script>
+    /**
+     *     <section class="page-section contact-heading">
+        <div class="container">
+            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">University of North Carolina at Charlotte, 2015-2019</span>
+                                <span class="section-heading-lower"><b>Bachelor of Science in Computer Science</b></span>
+
+                                <br />
+
+                                <span class="section-heading-upper">Forsyth Technical Community College, 2011-2015</span>
+                                <span class="section-heading-lower"><b>Associate in Arts</b></span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     **/
+</script>

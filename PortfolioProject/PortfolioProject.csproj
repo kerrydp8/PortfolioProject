@@ -267,10 +267,7 @@
     <Content Include="scss\_store.scss" />
     <Content Include="scss\_variables.scss" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Resume.cshtml" />
     <Content Include="Views\Home\Portfolio.cshtml" />
-    <Content Include="Views\Home\Education.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
