@@ -52,7 +52,7 @@ namespace PortfolioProject.Controllers
             return View();
         }
 
-        public ActionResult Skills()
+        public ActionResult Resume()
         {
             return View();
         }
