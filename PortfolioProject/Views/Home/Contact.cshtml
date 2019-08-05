@@ -1,6 +1,6 @@
-﻿<script>
-    LAYOUT = null;
-</script>
+﻿@model PortfolioProject.Models.EmailModel 
+
+<script>LAYOUT = null;</script>
 
 <style>
     .footer {
@@ -8,22 +8,21 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: white;
+        background-color: yellow;
         color: white;
         text-align: center;
     }
-
 </style>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
 
     <title>Kerry Peay Portfolio</title>
 
@@ -32,7 +31,6 @@
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="~/css/business-casual.min.css" rel="stylesheet">
@@ -42,7 +40,7 @@
 <body style="background-image:url('https://foodiecards.com/wp-content/uploads/2015/09/Website-Background.jpg');">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <nav class="navbar navbar-expand-lg py-lg-4" id="mainNav">
         <div class="container">
             <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Kerry Peay</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,9 +48,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item px-lg-4">
+                    <li class="nav-item active px-lg-4">
                         <b>@Html.ActionLink("Home", "Index", null, new { @class = "navbar-brand" })</b>
-                        <!--<a class="nav-link text-uppercase text-expanded" href="index.html">Home <span class="sr-only">(current)</span>
+                        <!--<a class="nav-link text-uppercase text-expanded" href="index.html">Home<!---->
+                        <!--<span class="sr-only">(current)</span>
                         </a>-->
                     </li>
                     <li class="nav-item px-lg-4">
@@ -69,27 +68,64 @@
     </nav>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-        <!--<span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>-->
+        <!--<span class="site-heading-upper text-primary mb-3">Kerry Peay</span>-->
         <span class="site-heading-upper text-primary"><b>Contact</b></span>
     </h1>
 
-    <section class="page-section about-heading">
-        <div class="container">
-            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
-            <div class="about-heading-content">
-                <div class="row">
-                    <div class="col-xl-9 col-lg-10 mx-auto">
-                        <div class="bg-faded rounded p-5">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper">Email:</span>
-                                <span class="section-heading-lower"><b>kerrydp8@outlook.com</b></span>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
+    <br />
+    <br />
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.FromName)
             </div>
         </div>
-    </section>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control", placeholder = "example@email.com" })
+                @Html.ValidationMessageFor(m => m.FromEmail)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Subject, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Enter subject here" })
+                @Html.ValidationMessageFor(m => m.Subject)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Body, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Body, new { @class = "form-control", placeholder = "Enter a message", id = "editor" })
+                @Html.ValidationMessageFor(m => m.Body)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-primary" value="Send" />
+            </div>
+        </div>
+
+        <hr />
+
+        <div>
+            <button class="btn btn-default">@Html.ActionLink("Back to Homepage", "Index", "Home")</button>
+        </div>
+    }
 
     <!--
 
@@ -107,3 +143,4 @@
 </body>
 
 </html>
+
