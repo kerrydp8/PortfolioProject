@@ -2,6 +2,19 @@
 
 <style>
 
+    a:link, a:visited {
+        background-color: yellow;
+        color: gray;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    a:hover, a:active {
+        background-color: red;
+    }
+
     p {
         font-size: 16px;
     }
@@ -20,7 +33,7 @@
     }
 
     .footer {
-        position: fixed;
+        position: sticky;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -29,13 +42,24 @@
         text-align: center;
     }
 
-        ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        border: 1px solid #e7e7e7;
-        background-color: white;
+                .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: gray;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
 </style>
@@ -116,6 +140,31 @@
                                     <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome">Palindrome</button>
                                     <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#fizzBuzz">FizzBuzz</button>
                                     <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#soaf">Sum of All Fears</button>
+                                    <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fforbestechcouncil%2Ffiles%2F2019%2F01%2Fcanva-photo-editor-8-7.jpg" alt="coding" height="200" width="200">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section about-heading">
+        <div class="container">
+            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-lower"><b>Blog</b></span>
+                            </h2>
+                            <p>A technology-themed blog created using MVC and Bootstrap.</p>
+                            <div class="row">
+                                <div class="col-md-12 text-left">
+                                    <a href="https://kerrydpblog.azurewebsites.net/"></a>
+                                    <img src="http://www.mkels.com/wp-content/uploads/2017/06/reasons-to-enhance-your-design-capabilities-with-some-coding-skills.jpg" alt="coding" height="200" width="200">
                                 </div>
                             </div>
                         </div>
