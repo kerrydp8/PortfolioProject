@@ -9,7 +9,16 @@
         background-color: yellow;
         color: white;
         text-align: center;
-    }
+        }
+
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #e7e7e7;
+        background-color: white;
+        }
 </style>
 
 <!DOCTYPE html>
@@ -47,17 +56,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active px-lg-4">
-                        @Html.ActionLink("Home", "Index", null, new { @class = "navbar-brand" })
+                        <b>@Html.ActionLink("Home", "Index", null, new { @class = "navbar-brand" })</b>
                         <!--<a class="nav-link text-uppercase text-expanded" href="index.html">Home<!---->
                         <!--<span class="sr-only">(current)</span>
                         </a>-->
                     </li>
                     <li class="nav-item px-lg-4">
-                        @Html.ActionLink("Contact", "Contact", null, new { @class = "navbar-brand" })
+                        <b>@Html.ActionLink("Contact", "Contact", null, new { @class = "navbar-brand" })</b>
                         <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
                     </li>
                     <li class="nav-item px-lg-4">
-                        @Html.ActionLink("Portfolio", "Portfolio", null, new { @class = "navbar-brand" })
+                        <b>@Html.ActionLink("Portfolio", "Portfolio", null, new { @class = "navbar-brand" })</b>
                         <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
                     </li>
                 </ul>
