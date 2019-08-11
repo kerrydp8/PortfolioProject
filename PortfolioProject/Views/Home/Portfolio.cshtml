@@ -41,26 +41,25 @@
         text-align: center;
     }
 
-                .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 
-        .container {
-            position: relative;
-            text-align: center;
-            color: gray;
-        }
+    .container {
+        position: relative;
+        text-align: center;
+        color: gray;
+    }
 
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 
 <!DOCTYPE html>
@@ -125,6 +124,32 @@
 
     <section class="page-section about-heading">
         <div class="container">
+            <!--<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">-->
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-lower"><b>Blog</b></span>
+                            </h2>
+                            <p>A technology-themed blog created using MVC and Bootstrap.</p>
+                            <div class="row">
+                                <div class="col-md-12 text-left">
+                                    <button class="button btn-primary btn-lg" onclick="window.location.href = 'https://kerrydpblog.azurewebsites.net/';">Go to Blog</button>
+                                    <img src="http://www.mkels.com/wp-content/uploads/2017/06/reasons-to-enhance-your-design-capabilities-with-some-coding-skills.jpg" alt="coding" align="right" height="200" width="200">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br />
+
+    <section class="page-section about-heading">
+        <div class="container">
             <div class="about-heading-content">
                 <div class="row">
                     <div class="col-xl-9 col-lg-10 mx-auto">
@@ -151,30 +176,6 @@
     </section>
 
     <br />
-
-    <section class="page-section about-heading">
-        <div class="container">
-            <!--<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">-->
-            <div class="about-heading-content">
-                <div class="row">
-                    <div class="col-xl-9 col-lg-10 mx-auto">
-                        <div class="bg-faded rounded p-5">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-lower"><b>Blog</b></span>
-                            </h2>
-                            <p>A technology-themed blog created using MVC and Bootstrap.</p>
-                            <div class="row">
-                                <div class="col-md-12 text-left">
-                                    <button class="button btn-primary btn-lg" onclick="window.location.href = 'https://kerrydpblog.azurewebsites.net/';">Go to Blog</button>
-                                    <img src="http://www.mkels.com/wp-content/uploads/2017/06/reasons-to-enhance-your-design-capabilities-with-some-coding-skills.jpg" alt="coding" align="right" height="200" width="200">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <div id="basicMath" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
@@ -702,7 +703,7 @@
 
                             <div class="row">
                                 <div class="col-md-12 text-center wrap h4">
-                                    <p id="fbOut"></p>
+                                    <!--<p id="fbOut"></p>--><span id="fbOut"></span>
                                 </div>
                             </div>
                         </div>
@@ -1002,6 +1003,7 @@
     <script src="~/Scripts/Palindrome.js"></script>
     <script src="~/Scripts/FizzBuzz.js"></script>
     <script src="~/Scripts/SumOfAllFears.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script>
 

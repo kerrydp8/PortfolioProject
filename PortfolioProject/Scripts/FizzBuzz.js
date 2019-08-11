@@ -1,5 +1,8 @@
 ﻿$(document).ready(function () {
 
+    var output = document.getElementById("output");
+    output.style.color = "green";
+
     $("#fbCode").hide();
 
     $("#showBtn4").click(function () {
