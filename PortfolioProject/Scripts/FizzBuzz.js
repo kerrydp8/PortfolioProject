@@ -22,16 +22,16 @@
         for (var i = 1; i <= 100; i++) {
 
             if ((i % num1 == 0) && (i % num2 != 0)) {
-                output.push("Fizz");
+                output.push("<span style='color:blue'>Fizz</span>");
             }
 
             else if ((i % num2 == 0) && (i % num1 != 0)) {
-                output.push("Buzz");
+                output.push("<span style='color:red'>Buzz</span>");
             }
 
             else if ((i % num1 == 0 && i % num2 == 0)) { //The issue was only the first condition was checked off in this statement, leading
                 //only to "Fizz" being printed instead of "FizzBuzz". We fixed this by adding NOT conditions to the above statements.
-                output.push("FizzBuzz");
+                output.push("<span style='color: blue'>FizzBuzz</span>");
             }
 
             else {
@@ -50,4 +50,6 @@
         $("#fbOut").text(""); //Clear results
 
     });
+
+    document.getElementById("fbOut").style.color = "blue";
 });

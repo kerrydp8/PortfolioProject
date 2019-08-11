@@ -2,7 +2,24 @@
 
 <style>
 
-    body {font-family: Arial, Helvetica, sans-serif;}
+    .className {
+    word-break:keep-all;
+    }
+
+    div.d {
+  text-align: justify;
+} 
+
+
+    .keepAll {
+  word-break: keep-all;
+}
+
+    body {font-family: Arial, Helvetica, sans-serif;}  
+
+    .span {
+        white-space: pre-wrap;
+    }
 
     #myImg {
     border-radius: 5px;
@@ -243,9 +260,9 @@
                             <p>Coding exercises created to demonstrate problem-solving skills using the JavaScript language.</p>
                             <div class="row">
                                 <div class="col-md-12 text-left">
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#basicMath"> <img src="https://static01.nyt.com/images/2019/08/02/science/02EQUATION1/merlin_158743359_ff291f8a-d473-4849-9d81-9762826b55f4-articleLarge.jpg?quality=75&auto=webp&disable=upscale" height="100" width="100"> </button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#factorial"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Factorial_Interpolation.svg" height="100" width="100"> </button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome"> <img src="https://media.buzzle.com/media/images-en/gallery/careers/scientists/1200-537703967-word-game.jpg" height="100" width="100"> </button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#basicMath"> <img src="https://static01.nyt.com/images/2019/08/02/science/02EQUATION1/merlin_158743359_ff291f8a-d473-4849-9d81-9762826b55f4-articleLarge.jpg?quality=75&auto=webp&disable=upscale" height="100" width="100"></button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#factorial"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Factorial_Interpolation.svg" height="100" width="100"></button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome"> <img src="https://media.buzzle.com/media/images-en/gallery/careers/scientists/1200-537703967-word-game.jpg" height="100" width="100"></button>
                                     <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#fizzBuzz"><img src="https://i.ibb.co/m61Lpsb/Screenshot-49.png" alt="Screenshot-49" border="0" height="100" width="100"></button>
                                     <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#soaf"><img src="https://i.ibb.co/GTt4v0M/Sum-Of-Fears.png" alt="Sum-Of-Fears" border="0" height="100" width="100"></button>
                                 </div>
@@ -717,13 +734,13 @@
         <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content modal-lg">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">FizzBuzz</h4>
                 </div>
 
-                <div class="modal-body">
+                <div class="modal-body modal-lg">
                     <p>Enter two numbers between 1 and 100. Each value that is a multiple of the first number will be replaced by the word "Fizz".</p>
                     <p>Each value that is a multiple of the second value will be replaced by the word "Buzz".</p>
                     <p>Any value that is a multiple of both will be replaced by the word "FizzBuzz".</p>
@@ -780,16 +797,13 @@
                                     <b><u>Results:</u></b> <!--Can be used to underline text-->
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-12 text-center wrap h4">
-                                    <!--<p id="fbOut"></p>--><span id="fbOut"></span>
+                            <div class="d row">
+                                <div class="d col-md-12 className wrap h4">
+                                    <!--<p id="fbOut"></p>--><!--<span style="color:green" id="fbOut"></span>--><span style="color:blue" id="fbOut"></span>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                     <div class="row">
                         <div class="col-md-12">
                             <div id="fbCode">
@@ -961,7 +975,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-12 text-center wrap h4">
+                                <div class="col-md-12 text-center text-align-last wrap h4">
                                     <p id="kOut"></p>
                                 </div>
                             </div>
