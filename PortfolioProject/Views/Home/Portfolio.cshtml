@@ -2,6 +2,14 @@
 
 <style>
 
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+    #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
     a:link, a:visited {
         color: gray;
         padding: 15px 25px;
@@ -9,6 +17,70 @@
         text-decoration: none;
         display: inline-block;
     }
+
+    #myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 
     a:hover, a:active {
         background-color: red;
@@ -132,23 +204,24 @@
                             <h2 class="section-heading mb-4">
                                 <span class="section-heading-lower"><b>Blog</b></span>
                             </h2>
-                            <p>A technology-themed blog created using an MVC pattern. Users can visit the blog and not only read the material, but create their own accounts 
-                                and comment on the posts.     
-                            <div class="row">
-                                <div class="col-md-12 text-left">
-                                    <button class="button btn-primary btn-lg" onclick="window.location.href = 'https://kerrydpblog.azurewebsites.net/';">Go to Blog</button>
-                                    <img src="http://www.mkels.com/wp-content/uploads/2017/06/reasons-to-enhance-your-design-capabilities-with-some-coding-skills.jpg" alt="coding" align="right" height="200" width="200">
+                            <p>
+                                A technology-themed blog created using an MVC pattern. Users can visit the blog and not only read the material, but create their own accounts
+                                and comment on the posts.
+                                <div class="row">
+                                    <div class="col-md-12 text-left">
+                                        <button class="button btn-primary btn-lg" onclick="window.location.href = 'https://kerrydpblog.azurewebsites.net/';">Go to Blog</button>
+                                        <img src="http://www.mkels.com/wp-content/uploads/2017/06/reasons-to-enhance-your-design-capabilities-with-some-coding-skills.jpg" alt="coding" align="right" height="200" width="200">
+                                    </div>
                                 </div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" alt="JavaScript" align="left" height="100" width="100">
-                                    <img src="http://www.techbaz.org/Course/img/csharp-logo.png" alt="CSharp" align="left" height="100" width="100">
-                                    <img src="https://fuzati.com/wp-content/uploads/2016/12/Bootstrap-Logo.png" alt="Bootstrap" align="left" height="100" width="125">
-                                    <img src="https://banner2.kisspng.com/20180811/eic/kisspng-net-framework-software-framework-programmer-compu-homepage-5b6eea83f1fcd1.3292203315339956519912.jpg" alt=".Net" align="left" height="100" width="125">
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" alt="JavaScript" align="left" height="100" width="100">
+                                        <img src="http://www.techbaz.org/Course/img/csharp-logo.png" alt="CSharp" align="left" height="100" width="100">
+                                        <img src="https://fuzati.com/wp-content/uploads/2016/12/Bootstrap-Logo.png" alt="Bootstrap" align="left" height="100" width="125">
+                                        <img src="https://banner2.kisspng.com/20180811/eic/kisspng-net-framework-software-framework-programmer-compu-homepage-5b6eea83f1fcd1.3292203315339956519912.jpg" alt=".Net" align="left" height="100" width="125">
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -170,17 +243,11 @@
                             <p>Coding exercises created to demonstrate problem-solving skills using the JavaScript language.</p>
                             <div class="row">
                                 <div class="col-md-12 text-left">
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#basicMath">Basic Math</button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#factorial">Factorial</button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome">Palindrome</button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#fizzBuzz">FizzBuzz</button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#soaf">Sum of All Fears</button>
-                                    <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fforbestechcouncil%2Ffiles%2F2019%2F01%2Fcanva-photo-editor-8-7.jpg" alt="coding" align="right" height="200" width="200">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" alt="JavaScript" align="left" height="100" width="100">
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#basicMath"> <img src="https://static01.nyt.com/images/2019/08/02/science/02EQUATION1/merlin_158743359_ff291f8a-d473-4849-9d81-9762826b55f4-articleLarge.jpg?quality=75&auto=webp&disable=upscale" height="100" width="100"> </button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#factorial"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Factorial_Interpolation.svg" height="100" width="100"> </button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome"> <img src="https://media.buzzle.com/media/images-en/gallery/careers/scientists/1200-537703967-word-game.jpg" height="100" width="100"> </button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#fizzBuzz"><img src="https://i.ibb.co/m61Lpsb/Screenshot-49.png" alt="Screenshot-49" border="0" height="100" width="100"></button>
+                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#soaf"><img src="https://i.ibb.co/GTt4v0M/Sum-Of-Fears.png" alt="Sum-Of-Fears" border="0" height="100" width="100"></button>
                                 </div>
                             </div>
                         </div>
@@ -189,8 +256,6 @@
             </div>
         </div>
     </section>
-
-    <br />
 
     <div id="basicMath" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
