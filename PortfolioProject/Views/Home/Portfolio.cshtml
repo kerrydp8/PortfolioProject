@@ -2,30 +2,6 @@
 
 <style>
 
-    .className {
-    word-break:keep-all;
-    }
-
-    div.d {
-  text-align: justify;
-} 
-
-
-    .keepAll {
-  word-break: keep-all;
-}
-
-    body {font-family: Arial, Helvetica, sans-serif;}  
-
-    .span {
-        white-space: pre-wrap;
-    }
-
-    #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    }
 
     a:link, a:visited {
         color: gray;
@@ -34,92 +10,22 @@
         text-decoration: none;
         display: inline-block;
     }
-
-    #myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
     a:hover, a:active {
         background-color: red;
     }
-
     p {
         font-size: 16px;
     }
-
     .button1 {
         width: 100%
     }
-
     div.wrap {
         word-wrap: break-word;
     }
-
     .modal-body {
         max-height: calc(100vh - 143px);
         overflow-y: auto;
     }
-
     .footer {
         position: sticky;
         left: 0;
@@ -129,26 +35,30 @@
         color: white;
         text-align: center;
     }
-
     .center {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
     }
-
     .container {
         position: relative;
         text-align: center;
         color: gray;
     }
-
     .centered {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+        .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+
 </style>
 
 <!DOCTYPE html>
@@ -160,6 +70,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Kerry Peay Portfolio</title>
 
@@ -169,6 +80,7 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Custom styles for this template -->
     <link href="~/css/business-casual.min.css" rel="stylesheet">
@@ -258,21 +170,98 @@
                                 <span class="section-heading-lower"><b>Coding Challenges</b></span>
                             </h2>
                             <p>Coding exercises created to demonstrate problem-solving skills using the JavaScript language.</p>
-                            <div class="row">
-                                <div class="col-md-12 text-left">
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#basicMath"> <img src="https://static01.nyt.com/images/2019/08/02/science/02EQUATION1/merlin_158743359_ff291f8a-d473-4849-9d81-9762826b55f4-articleLarge.jpg?quality=75&auto=webp&disable=upscale" height="100" width="100"></button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#factorial"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Factorial_Interpolation.svg" height="100" width="100"></button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome"> <img src="https://media.buzzle.com/media/images-en/gallery/careers/scientists/1200-537703967-word-game.jpg" height="100" width="100"></button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#fizzBuzz"><img src="https://i.ibb.co/m61Lpsb/Screenshot-49.png" alt="Screenshot-49" border="0" height="100" width="100"></button>
-                                    <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#soaf"><img src="https://i.ibb.co/GTt4v0M/Sum-Of-Fears.png" alt="Sum-Of-Fears" border="0" height="100" width="100"></button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="w3-card-4" style="width:20%;">
+                <header class="w3-container w3-yellow">
+                    <h1><b>Basic Math</b></h1>
+                </header>
+
+                <div class="w3-container">
+                    <img src="https://static01.nyt.com/images/2019/08/02/science/02EQUATION1/merlin_158743359_ff291f8a-d473-4849-9d81-9762826b55f4-articleLarge.jpg?quality=75&auto=webp&disable=upscale" class="card-img-top" height="100" width="210" />
+                </div>
+
+                <button type="button" class="padder button btn-primary btn-lg" data-toggle="modal" data-target="#basicMath">Basic Math</button>
+
+                <footer class="w3-container w3-yellow">
+                    <!--<h5>Footer</h5>-->
+                </footer>
+            </div>
+
+            <div class="w3-card-4" style="width:20%;">
+                <header class="w3-container w3-yellow">
+                    <h1><b>Factorial</b></h1>
+                </header>
+
+                <div class="w3-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Factorial_Interpolation.svg" class="card-img-top" height="100" width="210" />
+                </div>
+
+                <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#factorial">Factorial</button>
+
+                <footer class="w3-container w3-yellow">
+                    <!--<h5>Footer</h5>-->
+                </footer>
+            </div>
+
+            <div class="w3-card-4" style="width:20%;">
+                <header class="w3-container w3-yellow">
+                    <h1><b>Palindrome</b></h1>
+                </header>
+
+                <div class="w3-container">
+                    <img src="https://media.buzzle.com/media/images-en/gallery/careers/scientists/1200-537703967-word-game.jpg" class="card-img-top" height="100" width="210" />
+                </div>
+
+                <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#palindrome">Palindrome</button>
+
+                <footer class="w3-container w3-yellow">
+                    <!--<h5>Footer</h5>-->
+                </footer>
+            </div>
+
+            <div class="w3-card-4" style="width:20%;">
+                <header class="w3-container w3-yellow">
+                    <h1><b>FizzBuzz</b></h1>
+                </header>
+
+                <div class="w3-container">
+                    <img src="https://i.ibb.co/xmSHZgy/FB.png" alt="FB" border="0" class="card-img-top" height="50" width="50" />
+                </div>
+
+                <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#fizzBuzz">FizzBuzz</button>
+
+                <footer class="w3-container w3-yellow">
+                    <!--<h5>Footer</h5>-->
+                </footer>
+            </div>
+
+            <div class="w3-card-4" style="width:20%;">
+                <header class="w3-container w3-yellow">
+                    <h1><b>S.O.A.F.</b></h1>
+                </header>
+
+                <div class="w3-container">
+                    <img src="https://i.ibb.co/GTt4v0M/Sum-Of-Fears.png" class="card-img-top" height="100" width="210" />
+                </div>
+
+                <button type="button" class="button btn-primary btn-lg" data-toggle="modal" data-target="#soaf">Sum of All Fears</button>
+
+                <footer class="w3-container w3-yellow">
+                    <!--<h5>Footer</h5>-->
+                </footer>
+            </div>
+        </div>
+
+    </div>
 
     <div id="basicMath" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
@@ -715,9 +704,7 @@
                                 syntax highlighter. Useful for displaying code.-->
                             </div>
                         </div>
-
                     </div>
-
 
                 </div>
 
@@ -734,13 +721,13 @@
         <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
-            <div class="modal-content modal-lg">
+            <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">FizzBuzz</h4>
                 </div>
 
-                <div class="modal-body modal-lg">
+                <div class="modal-body">
                     <p>Enter two numbers between 1 and 100. Each value that is a multiple of the first number will be replaced by the word "Fizz".</p>
                     <p>Each value that is a multiple of the second value will be replaced by the word "Buzz".</p>
                     <p>Any value that is a multiple of both will be replaced by the word "FizzBuzz".</p>
@@ -797,13 +784,16 @@
                                     <b><u>Results:</u></b> <!--Can be used to underline text-->
                                 </div>
                             </div>
-                            <div class="d row">
-                                <div class="d col-md-12 className wrap h4">
-                                    <!--<p id="fbOut"></p>--><!--<span style="color:green" id="fbOut"></span>--><span style="color:blue" id="fbOut"></span>
+
+                            <div class="row">
+                                <div class="col-md-12 text-center wrap h4">
+                                    <p id="fbOut"></p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                     <div class="row">
                         <div class="col-md-12">
                             <div id="fbCode">
