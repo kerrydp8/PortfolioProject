@@ -57,6 +57,11 @@ namespace PortfolioProject.Controllers
             //return View("Index", "BlogPosts"); //Does not work
         }
 
+        public ActionResult Education()
+        {
+            return View();
+        }
+
     public ActionResult BasicMath()
         {
             return View();

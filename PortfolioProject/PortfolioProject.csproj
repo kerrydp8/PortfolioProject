@@ -275,6 +275,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Portfolio.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Education.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\startbootstrap-business-casual-gh-pages\v16\" />
