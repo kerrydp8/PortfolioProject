@@ -1,81 +1,14 @@
 ﻿<script>LAYOUT = null;</script>
 
-<style>
-
-
-    a:link, a:visited {
-        color: gray;
-        padding: 15px 25px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-    }
-    a:hover, a:active {
-        background-color: red;
-    }
-    p {
-        font-size: 16px;
-    }
-    .button1 {
-        width: 100%
-    }
-    div.wrap {
-        word-wrap: break-word;
-    }
-    .modal-body {
-        max-height: calc(100vh - 143px);
-        overflow-y: auto;
-    }
-    .footer {
-        position: sticky;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: white;
-        color: white;
-        text-align: center;
-    }
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-    .container {
-        position: relative;
-        text-align: center;
-        color: gray;
-    }
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-        .card-img-top {
-        width: 100%;
-        height: 15vw;
-        object-fit: cover;
-    }
-
-        .button {
-            padding: 8px, 30px;
-            white-space:nowrap;
-            font-size: 75%;
-        }
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <title>Kerry Peay Portfolio</title>
 
@@ -89,6 +22,75 @@
 
     <!-- Custom styles for this template -->
     <link href="~/css/business-casual.min.css" rel="stylesheet">
+
+    <style>
+            li {
+        color: orange;
+    }
+
+    a:hover, a:active {
+        background-color: red;
+    }
+
+     p {
+        font-size: 16px;
+    }
+
+    .button1 {
+        width: 100%
+    }
+
+    div.wrap {
+        word-wrap: break-word;
+    }
+
+    .modal-body {
+        max-height: calc(100vh - 143px);
+        overflow-y: auto;
+    }
+
+    .footer {
+        position: sticky;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        color: white;
+        text-align: center;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .container {
+        position: relative;
+        text-align: center;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+
+    .button {
+        padding: 8px, 30px;
+        white-space: nowrap;
+        font-size: 75%;
+    }
+
+    </style>
 
 </head>
 
@@ -125,6 +127,10 @@
                         <b><a href="https://kerrydpblog.azurewebsites.net/">Kerry Peay's Blog</a></b>
                         <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
                     </li>
+                    <li class="nav-item px-lg-4">
+                        <b><a href="https://kerrypeaybugtracker.azurewebsites.net/">Kerry Peay's Bug Tracker</a></b>
+                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -134,6 +140,41 @@
         <!--<span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>-->
         <span class="site-heading-upper text-primary"><b>Portfolio</b></span>
     </h1>
+
+    <br />
+
+    <section class="page-section about-heading">
+        <div class="container">
+            <!--<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">-->
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-lower"><b>Bug Tracker</b></span>
+                            </h2>
+                            <p>
+                                An application that allows designated users to submit bugs within a project and delegate developers to fix them.
+                                <div class="row">
+                                    <div class="col-md-12 text-left">
+                                        <button class="button btn-primary btn-lg" onclick="window.location.href = 'https://kerrypeaybugtracker.azurewebsites.net/';">Go to Bug Tracker</button>
+                                        <img src="https://i.ibb.co/2qtNXb5/Bug-Tracker-Logo.png" alt="Bug-Tracker-Logo" align="right" width="200" height="200" border="0">
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <img src="http://www.techbaz.org/Course/img/csharp-logo.png" alt="CSharp" align="left" height="100" width="100">
+                                        <img src="https://fuzati.com/wp-content/uploads/2016/12/Bootstrap-Logo.png" alt="Bootstrap" align="left" height="100" width="125">
+                                        <img src="https://qwertyseo.com/wp-content/uploads/2017/05/67e4dee31014593770dfcd064e9faf24a982881c.png" alt=".Net" align="left" height="120" width="150">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <br />
 
@@ -159,7 +200,6 @@
                                 <br />
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" alt="JavaScript" align="left" height="100" width="100">
                                         <img src="http://www.techbaz.org/Course/img/csharp-logo.png" alt="CSharp" align="left" height="100" width="100">
                                         <img src="https://fuzati.com/wp-content/uploads/2016/12/Bootstrap-Logo.png" alt="Bootstrap" align="left" height="100" width="125">
                                         <img src="https://qwertyseo.com/wp-content/uploads/2017/05/67e4dee31014593770dfcd064e9faf24a982881c.png" alt=".Net" align="left" height="120" width="150">

@@ -2,18 +2,6 @@
 
 <script>LAYOUT = null;</script>
 
-<style>
-    .footer {
-        position: sticky;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: yellow;
-        color: white;
-        text-align: center;
-    }
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,9 +19,35 @@
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Custom styles for this template -->
     <link href="~/css/business-casual.min.css" rel="stylesheet">
+
+    <style>
+        .footer {
+            position: sticky;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: yellow;
+            color: white;
+            text-align: center;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
+
+        .input {
+            margin: 5px;
+        }
+
+        li {
+            color: orange;
+        }
+    </style>
 
 </head>
 
@@ -70,6 +84,10 @@
                         <b><a href="https://kerrydpblog.azurewebsites.net/">Kerry Peay's Blog</a></b>
                         <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
                     </li>
+                    <li class="nav-item px-lg-4">
+                        <b><a href="https://kerrypeaybugtracker.azurewebsites.net/">Kerry Peay's Bug Tracker</a></b>
+                        <!--<a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>-->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -93,7 +111,7 @@
         <div class="form-group">
             @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.FromName, new { @class = "form-control input" })
                 @Html.ValidationMessageFor(m => m.FromName)
             </div>
         </div>
@@ -101,7 +119,7 @@
         <div class="form-group">
             @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control", placeholder = "example@email.com" })
+                @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control input", placeholder = "example@email.com" })
                 @Html.ValidationMessageFor(m => m.FromEmail)
             </div>
         </div>
@@ -109,7 +127,7 @@
         <div class="form-group">
             @Html.LabelFor(m => m.Subject, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Enter subject here" })
+                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control input", placeholder = "Enter subject here" })
                 @Html.ValidationMessageFor(m => m.Subject)
             </div>
         </div>
@@ -117,7 +135,7 @@
         <div class="form-group">
             @Html.LabelFor(m => m.Body, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.TextBoxFor(m => m.Body, new { @class = "form-control", placeholder = "Enter a message", id = "editor" })
+                @Html.TextBoxFor(m => m.Body, new { @class = "form-control input", placeholder = "Enter a message", id = "editor" })
                 @Html.ValidationMessageFor(m => m.Body)
             </div>
         </div>
@@ -129,10 +147,6 @@
         </div>
 
         <hr />
-
-        <div>
-            <button class="btn btn-default">@Html.ActionLink("Back to Homepage", "Index", "Home")</button>
-        </div>
     }
 
     <!--
