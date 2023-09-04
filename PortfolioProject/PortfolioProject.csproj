@@ -136,6 +136,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\kerryPeayResume1.png" />
+    <Content Include="Content\Images\kerryPeayResume2.png" />
     <Content Include="css\business-casual.css" />
     <Content Include="css\business-casual.min.css" />
     <Content Include="favicon.ico" />
@@ -151,10 +153,7 @@
     <Content Include="Scripts\BasicMath.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include=".vs\ProjectSettings.json" />
-    <Content Include=".vs\slnx.sqlite" />
     <Content Include=".vs\startbootstrap-business-casual-gh-pages\config\applicationhost.config" />
-    <Content Include=".vs\VSWorkspaceState.json" />
     <Content Include="private.config" />
     <None Include="Properties\PublishProfiles\KerryPeay-portfolio - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

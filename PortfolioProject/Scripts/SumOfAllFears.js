@@ -57,22 +57,6 @@
                 $("#kOut").text("The k-value has not been found");
             }
         }
-
-        /*
-            if (k == (sum[0] + sum[1])) {
-                $("#kOut").text("The k-value " + k + " has been found by adding " + sum[0] + " and " + sum[1]);
-                //return; //This needs to be here to stop the else statement from executing. Some values will not equal k causing both
-                //statements to want to execute.
-
-                //YOU SHOULD STILL BE ABLE TO PUT SOMETHING HERE TO CHECK FOR THE I AND J VALUES RESPONSIBLE. It isn't like any of this
-                //changes the user input.
-            }
-
-            else
-            {
-                $("#kOut").text("The k-value has not been found");
-            }
-            */
     });
 
     $("#clrBtn5").click(function () {
